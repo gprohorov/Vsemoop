@@ -77,8 +77,14 @@ public class Rhombus {
 
         return (this.getAngle() == 0.5 * Math.PI) ? true : false ;
     }
-
-
-
+    @Override
+    public String toString() {
+        return "Rhombus{" +
+                "side=" + side +
+                ", angle=" + angle +
+                ", area=" + this.getArea() +
+                ", perimeter=" + this.getPerimeter() +
+                '}';
+    }
 
 }
