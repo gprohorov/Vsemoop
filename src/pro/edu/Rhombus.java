@@ -1,4 +1,7 @@
 package pro.edu;
+
+import java.util.Objects;
+
 /*
 *
 * Classame : Rhombus
@@ -54,10 +57,11 @@ public class Rhombus {
     public double getPerimeter(){
         return 4 * this.getSide();
     }
-
+    // The longest diagonal
     public double getLongDiagonal(){
         return this.getSide() * Math.sqrt( 2 + 2 *  Math.cos(this.getAngle()));
     }
+
 
     public double getShortDiagonal(){
         return this.getSide() * Math.sqrt( 2 -  2  * Math.cos(this.getAngle()));
@@ -77,6 +81,7 @@ public class Rhombus {
 
         return (this.getAngle() == 0.5 * Math.PI) ? true : false ;
     }
+
     @Override
     public String toString() {
         return "Rhombus{" +
@@ -85,6 +90,21 @@ public class Rhombus {
                 ", area=" + this.getArea() +
                 ", perimeter=" + this.getPerimeter() +
                 '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rhombus rhombus = (Rhombus) o;
+        return getSide() == rhombus.getSide() &&
+                Double.compare(rhombus.getAngle(), getAngle()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSide(), getAngle());
     }
 
 }
