@@ -21,7 +21,7 @@ import java.util.Objects;
 5. Override hash() and equals() methods.
 *
 * */
-public class Rhombus {
+public class Rhombus implements IGeometry{
 
     private int side;
     private double angle;
@@ -52,6 +52,11 @@ public class Rhombus {
 
     public double getArea(){
         return 0.5 * this.getLongDiagonal() * this.getShortDiagonal();
+    }
+
+    @Override
+    public double getLinearLength() {
+        return this.getPerimeter();
     }
 
     public double getPerimeter(){

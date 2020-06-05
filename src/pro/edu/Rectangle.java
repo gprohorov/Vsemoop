@@ -50,15 +50,12 @@ public class Rectangle implements IGeometry, IPackaging{
     public void setWidth(int width) {
         this.width = width;
     }
-
+/*
     public double getArea(){
         return this.getLength() * this.getWidth();
     }
 
-    @Override
-    public double getPerimeter() {
-        return 0;
-    }
+ */
 
     public static int  getArea(int length, int width){
         return length * width;
@@ -92,9 +89,21 @@ public class Rectangle implements IGeometry, IPackaging{
         return null;
     }
 
+    //  int _i = 0;
+    // int $j = 0;
+    // int   i = 0;
+
+
+
     @Override
     public String toXML() {
-        return null;
+
+        String xml = "<Rectangle>"
+                + "<length>" + this.getLength() + "</length>"
+                + "<width>" + this.getWidth() + "</width>"
+                +  "</Rectangle>";
+
+        return xml;
     }
 
     @Override
@@ -102,8 +111,19 @@ public class Rectangle implements IGeometry, IPackaging{
 
     }
 
+
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public double getArea() {
+        return this.getLength() * this.getWidth();
+    }
+
+    @Override
+    public double getLinearLength() {
+        return 2 * (this.getWidth() * this.getLength());
     }
 }

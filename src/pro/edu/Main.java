@@ -25,5 +25,23 @@ public class Main {
         myWall.setLength(5);
         myWall.setWidth(3);
 
+        Triangle tr1 = new Triangle(3,4,5);
+        Triangle tr2 = new Triangle(2,4,8);
+        Triangle tr3 = new Triangle(1,1,1);
+
+        tr2.setB(9);
+
+        System.out.println(tr3.getC());
+
+        EqileteralTriangle eTriangle = new EqileteralTriangle(4);
+      System.out.println(eTriangle.getLinearLength());
+
+
     }
+
+
+
+
+
+
 }
