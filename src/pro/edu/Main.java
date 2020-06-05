@@ -36,6 +36,8 @@ public class Main {
         EqileteralTriangle eTriangle = new EqileteralTriangle(4);
       System.out.println(eTriangle.getLinearLength());
 
+       Rectangle r7 = new Rectangle(7,8);
+      System.out.println(r7.toJSON());
 
     }
 

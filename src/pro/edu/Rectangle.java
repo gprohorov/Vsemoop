@@ -86,7 +86,12 @@ public class Rectangle implements IGeometry, IPackaging{
 
     @Override
     public String toJSON() {
-        return null;
+        String json = "Rectangle{"
+                + "\""  + "length\":" + this.getLength()
+                + ","
+                + "\""  + "width\":" + this.getWidth()
+                + "}";
+        return json;
     }
 
     //  int _i = 0;
@@ -106,6 +111,8 @@ public class Rectangle implements IGeometry, IPackaging{
         return xml;
     }
 
+
+    //  красиво вывести в консоль, всё, что посчитаете нужным :  длина, ширина, полощадь, диагональ
     @Override
     public void toConsole() {
 
