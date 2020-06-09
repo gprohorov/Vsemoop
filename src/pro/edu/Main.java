@@ -28,7 +28,7 @@ public class Main {
         Triangle tr1 = new Triangle(3,4,5);
         Triangle tr2 = new Triangle(2,4,8);
         Triangle tr3 = new Triangle(1,1,1);
-
+       // Triangle tr7 = TriangleFactory.create(6,7.9);
         tr2.setB(9);
 
         System.out.println(tr3.getC());
